@@ -47,7 +47,7 @@ export const PORTFOLIO_DATA = {
     linkedin: "https://linkedin.com/in/gurleen-kaur-bhatia-907b23293",
     leetcode: "https://leetcode.com/u/G8ThpK5j53",
     resumePath: "/resume/Gurleen_Kaur_Bhatia_Resume.pdf",
-    defaultPhotoPath: "/images/profile-transparent.svg",
+    defaultPhotoPath: "/gurleen-portrait.jpg",
   },
   education: {
     institution: "National Institute of Technology Agartala",

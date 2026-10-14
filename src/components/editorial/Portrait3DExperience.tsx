@@ -11,8 +11,10 @@ interface Portrait3DExperienceProps {
 export const Portrait3DExperience: React.FC<Portrait3DExperienceProps> = ({
   photoDisplayUrl,
   isEntranceSettled,
+  onPhotoSelected,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [tilt, setTilt] = useState<{ rx: number; ry: number }>({ rx: 0, ry: 0 });
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
@@ -78,6 +80,14 @@ export const Portrait3DExperience: React.FC<Portrait3DExperienceProps> = ({
       onPointerMove={handlePointerMove}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
+      onDoubleClick={() => fileInputRef.current?.click()}
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={(e) => {
+        e.preventDefault();
+        if (e.dataTransfer.files && e.dataTransfer.files[0] && onPhotoSelected) {
+          onPhotoSelected(e.dataTransfer.files[0]);
+        }
+      }}
       className={`relative w-full max-w-[460px] flex flex-col items-center justify-end transition-all duration-1000 ${
         isEntranceSettled ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-98'
       }`}
@@ -147,14 +157,28 @@ export const Portrait3DExperience: React.FC<Portrait3DExperienceProps> = ({
               className="h-full w-auto max-w-full object-contain object-bottom select-none pointer-events-none relative z-10"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                if (!target.src.endsWith('profile-transparent.svg')) {
-                  target.src = '/images/profile-transparent.svg';
+                if (!target.src.includes('profile.jpg')) {
+                  target.src = '/images/profile.jpg';
                 }
               }}
             />
           </div>
         </div>
       </div>
+
+      {/* Hidden file input for updating photo without visual clutter */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        aria-hidden="true"
+        onChange={(e) => {
+          if (e.target.files && e.target.files[0] && onPhotoSelected) {
+            onPhotoSelected(e.target.files[0]);
+          }
+        }}
+      />
     </div>
   );
 };

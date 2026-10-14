@@ -13,12 +13,20 @@ export default function App() {
   const [resumeOpen, setResumeOpen] = useState(false);
   const [customPhotoSrc, setCustomPhotoSrc] = useState<string | null>(null);
 
-  // Restore saved photo from localStorage if available
+  // Restore saved photo from localStorage if available and sync to server disk
   useEffect(() => {
     try {
       const saved = localStorage.getItem('gurleen_editorial_photo');
       if (saved) {
         setCustomPhotoSrc(saved);
+        // Persist to public disk so production build & published deployments include it
+        fetch('/api/sync-portrait', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ dataUrl: saved }),
+        }).catch(() => {
+          // Ignore network errors in static production environments
+        });
       }
     } catch {
       // Ignore storage errors in restricted contexts
@@ -36,6 +44,12 @@ export default function App() {
         } catch {
           // Quota limit fallback
         }
+        // Sync to server so production build has it
+        fetch('/api/sync-portrait', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ dataUrl: result }),
+        }).catch(() => {});
       }
     };
     reader.readAsDataURL(file);
