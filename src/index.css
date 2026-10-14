@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Strict Editorial Color System */
+    --color-neutral: #FAF9F7;          /* White / very light neutral page canvas */
+    --color-burgundy: #783D4C;         /* Primary accent (buttons, selective highlights) */
+    --color-burgundy-hover: #622F3D;   /* Darker burgundy on hover */
+    --color-burgundy-wash: #F7EFF1;    /* Very soft burgundy/rose tint */
+    --color-powder-blue: #DCE7F4;      /* Powder blue (soft backgrounds, graphics, badges) */
+    --color-powder-blue-light: #EEF4FA;/* Lighter powder blue for alternate sections */
+    --color-powder-blue-border: #D5E2F0;/* Subtle powder-blue border */
+    --color-slate: #354354;            /* Slate (primary typography, headings) */
+    --color-slate-muted: #5C6B7D;      /* Slate muted (secondary text, labels) */
+    --color-slate-light: #8E9BAA;      /* Slate light (meta info, captions) */
+    --color-card-bg: #FFFFFF;          /* Pure white card surfaces */
+
+    --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-neutral);
+    color: var(--color-slate);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCE7F4;
+  border-radius: 4px;
+  border: 2px solid #FAF9F7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #783D4C;
+}
+
+/* Perspective Stage for Hero Typography & Dimensional Entrance */
+.perspective-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Dimensional Heading Depth */
+.text-editorial-depth {
+  text-shadow:
+    0 1px 0 #FFFFFF,
+    0 2px 4px rgba(53, 67, 84, 0.08),
+    0 8px 24px rgba(120, 61, 76, 0.08);
+}
+
+.text-dramatic-burgundy {
+  text-shadow:
+    0 1px 0 #FFFFFF,
+    0 3px 8px rgba(120, 61, 76, 0.12),
+    0 12px 28px rgba(53, 67, 84, 0.10);
+}
+
+/* Clean Slate/Powder-Blue Pattern */
+.slate-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(220, 231, 244, 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 231, 244, 0.55) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Mask image for seamless bottom portrait blending into the light canvas */
+.mask-blend-bottom {
+  mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
+  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
+}
+
+.mask-blend-radial {
+  mask-image: radial-gradient(ellipse 95% 90% at 50% 40%, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 90% at 50% 40%, black 70%, transparent 100%);
+}
+
+/* Organic Blob Breathing Animation */
+@keyframes organicPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.04) translate(6px, -8px) rotate(2deg);
+  }
+  66% {
+    transform: scale(0.97) translate(-5px, 6px) rotate(-1.5deg);
+  }
+}
+
+.animate-organic-blob {
+  animation: organicPulse 14s ease-in-out infinite;
+}
+
+/* Subtle Constellation Glow */
+@keyframes delicatePulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.animate-delicate-pulse {
+  animation: delicatePulse 4s ease-in-out infinite;
+}
+
+/* Diagram Flow Dash */
+@keyframes flowDashBurgundy {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-flow-dash {
+  animation: flowDashBurgundy 2.2s linear infinite;
+}
+
+/* Smooth Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

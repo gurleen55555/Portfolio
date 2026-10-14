@@ -1,0 +1,31 @@
+GURLEEN KAUR BHATIA — RESUME
+Computer Science and Engineering Undergraduate (2025–2029)
+National Institute of Technology Agartala
+CGPA: 9.28 / 10 | Class XII: 95% | Class X: 97%
+Email: khushibhatia5555@gmail.com
+GitHub: https://github.com/gurleen55555
+LinkedIn: https://linkedin.com/in/gurleen-kaur-bhatia-907b23293
+LeetCode: https://leetcode.com/u/G8ThpK5j53
+
+TECHNICAL SKILLS
+- Programming: Python, Java, C, SQL, TypeScript, Swift
+- AI/ML: Machine Learning, Deep Learning, Generative AI, LLMs, RAG, LSTM, Embeddings, Semantic Search, Knowledge Graphs
+- Frameworks: TensorFlow/Keras, PyTorch, scikit-learn, Pandas, NumPy, NetworkX, OSMnx, Next.js, React, Streamlit, Ollama
+- Optimization: QPSO, Metaheuristics, Dijkstra, A*, Genetic Algorithms, Ant Colony Optimization
+- Core CS: Data Structures & Algorithms, OOP, DBMS, OS, Computer Networks
+
+PROJECTS
+1. Zentro AI (May 2026) — Multi-Agent Business Operating System (Microsoft Agents League 2026 Reasoning Track)
+2. AstraGrid AI (July 2026) — Air-Gapped Predictive Copilot & Telemetry Monitor (Bharatiya Antariksh Hackathon 2026)
+3. Quantum-Inspired Traffic Optimization (Sept 2026–Present) — Dynamic Urban Route Optimization via QPSO on 600+ node networks
+
+LEADERSHIP & EXPERIENCE
+- Google Student Ambassador (May 2026–Present)
+- Technical Operations Assistant, Levitate Labs (May 2026–Present)
+- Core Member, DSAI Club, NIT Agartala (2025–Present)
+- Technical Team Member, Nari Udaan (2025–Present)
+- Member, Rewriting the Code (2025–Present)
+
+CERTIFICATIONS
+- AWS Educate: Introduction to Machine Learning (2026)
+- AWS Educate: Introduction to Generative AI (2026)
