@@ -8,6 +8,7 @@ import {
   Linkedin, 
   Code2
 } from 'lucide-react';
+import { Portrait3DExperience } from './Portrait3DExperience';
 
 interface HeroSectionProps {
   onExploreWork: () => void;
@@ -298,77 +299,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* ============================================================== */}
-          {/* RIGHT SIDE: BORDERLESS & DIMENSIONAL PORTRAIT INTEGRATION      */}
-          {/* Absolutely NO card container, NO box border, NO caption strip  */}
+          {/* RIGHT SIDE: AUTHENTIC 3D BODY CUTOUT PRESENTATION             */}
+          {/* Pasted directly onto intro page with realistic shadow depth    */}
           {/* ============================================================== */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-            
-            {/* Main Dimensional Portrait Stage - Free Standing Silhouette */}
-            <div 
-              className={`relative w-full max-w-[420px] flex flex-col items-center justify-center transition-all duration-1000 ease-out ${
-                animStep >= 3 
-                  ? 'opacity-100 translate-y-0 scale-100' 
-                  : 'opacity-0 translate-y-8 scale-95'
-              }`}
-              style={{
-                transform: `rotateX(${-tilt.rx * 0.6}deg) rotateY(${-tilt.ry * 0.6}deg)`,
-                transformStyle: 'preserve-3d',
-              }}
-            >
-              {/* 1. Ethereal Soft Powder-Blue Organic Backdrop Shape */}
-              <div 
-                className="absolute inset-0 -m-6 sm:-m-10 pointer-events-none z-0 flex items-center justify-center"
-                aria-hidden="true"
-              >
-                <svg
-                  viewBox="0 0 500 560"
-                  className="w-full h-full max-w-[460px] max-h-[520px] transition-transform duration-700 ease-out"
-                  fill="none"
-                >
-                  <defs>
-                    <linearGradient id="powderBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#DCE7F4" stopOpacity={0.85} />
-                      <stop offset="50%" stopColor="#C9DCF0" stopOpacity={0.7} />
-                      <stop offset="100%" stopColor="#EEF4FA" stopOpacity={0.3} />
-                    </linearGradient>
-                    <filter id="softOrganicGlow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feGaussianBlur stdDeviation="30" result="blur" />
-                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                  </defs>
-                  {/* Organic fluid silhouette aura behind the figure */}
-                  <path
-                    d="M 250 50 C 370 40, 470 120, 460 250 C 450 380, 390 490, 260 510 C 130 530, 40 430, 45 280 C 50 130, 130 60, 250 50 Z"
-                    fill="url(#powderBlueGrad)"
-                    filter="url(#softOrganicGlow)"
-                    className="animate-organic-blob"
-                  />
-                </svg>
-              </div>
-
-              {/* 2. Completely Borderless Portrait - Stands Directly on Canvas */}
-              <div className="relative z-10 w-full flex items-center justify-center">
-                <div 
-                  className="relative w-full max-w-[380px] aspect-[4/5] flex items-end justify-center mask-blend-bottom"
-                  style={{
-                    filter: 'drop-shadow(0 20px 32px rgba(120, 61, 76, 0.12)) drop-shadow(0 4px 12px rgba(53, 67, 84, 0.08))',
-                  }}
-                >
-                  <img
-                    src={photoDisplayUrl}
-                    alt="Gurleen Kaur Bhatia - Software Engineer & AI Researcher"
-                    className="w-full h-full object-contain object-bottom select-none pointer-events-none transition-transform duration-700 ease-out hover:scale-[1.02]"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      if (!target.src.endsWith('profile-transparent.svg')) {
-                        target.src = '/images/profile-transparent.svg';
-                      }
-                    }}
-                  />
-                </div>
-              </div>
-
-            </div>
+          <div className="lg:col-span-5 flex flex-col items-center justify-end relative">
+            <Portrait3DExperience
+              photoDisplayUrl={photoDisplayUrl}
+              isEntranceSettled={animStep >= 3}
+              onPhotoSelected={onPhotoSelected}
+              onResetPhoto={onResetPhoto}
+              isCustomPhoto={Boolean(customPhotoSrc)}
+            />
           </div>
 
         </div>

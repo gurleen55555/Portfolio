@@ -57,8 +57,8 @@
     </filter>
   </defs>
 
-  <!-- Person Silhouette with Ambient Depth Shadow -->
-  <g filter="url(#softPersonShadow)">
+  <!-- Person Silhouette Cutout -->
+  <g id="gurleen-body-cutout">
     <!-- Back Hair (bun/ponytail) -->
     <ellipse cx="600" cy="225" rx="75" ry="60" fill="url(#hairGrad)" />
 

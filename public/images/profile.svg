@@ -1,12 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 80 900 1520" width="900" height="1520" fill="none">
   <defs>
-    <!-- Background studio lighting -->
-    <radialGradient id="wallBg" cx="50%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#F4ECE2" />
-      <stop offset="60%" stop-color="#E5D9CB" />
-      <stop offset="100%" stop-color="#CBBCAE" />
-    </radialGradient>
-
     <!-- Hair gradient -->
     <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#1A1817" />
@@ -35,14 +28,14 @@
 
     <!-- Black Suit Blazer -->
     <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#22252A" />
-      <stop offset="30%" stop-color="#181B1F" />
-      <stop offset="100%" stop-color="#0E1013" />
+      <stop offset="0%" stop-color="#24272D" />
+      <stop offset="30%" stop-color="#1A1D22" />
+      <stop offset="100%" stop-color="#111317" />
     </linearGradient>
 
     <linearGradient id="lapelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2A2D33" />
-      <stop offset="100%" stop-color="#15171A" />
+      <stop offset="0%" stop-color="#2E323A" />
+      <stop offset="100%" stop-color="#181B1F" />
     </linearGradient>
 
     <!-- Brown Leather Belt -->
@@ -58,159 +51,132 @@
       <stop offset="100%" stop-color="#BA8E74" />
     </linearGradient>
 
-    <!-- Subtle Arctic Cyan Holographic Atmosphere -->
-    <radialGradient id="arcticAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#62E6FF" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#080D14" stop-opacity="0" />
-    </radialGradient>
+    <!-- Ambient silhouette soft shadow filter -->
+    <filter id="softPersonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#783D4C" flood-opacity="0.14" />
+    </filter>
   </defs>
 
-  <!-- Wall Background -->
-  <rect width="1200" height="1600" fill="url(#wallBg)" />
-  <circle cx="600" cy="500" r="550" fill="url(#arcticAura)" />
+  <!-- Person Silhouette Cutout -->
+  <g id="gurleen-body-cutout">
+    <!-- Back Hair (bun/ponytail) -->
+    <ellipse cx="600" cy="225" rx="75" ry="60" fill="url(#hairGrad)" />
 
-  <!-- Subtle Studio Drop Shadow behind subject -->
-  <ellipse cx="600" cy="950" rx="360" ry="600" fill="#B39F8C" opacity="0.35" filter="blur(20px)" />
+    <!-- Torso & Shoulders: Black Tailored Suit Jacket -->
+    <!-- Base Torso -->
+    <path d="M 230 1600 L 270 700 C 310 560, 430 520, 600 520 C 770 520, 890 560, 930 700 L 970 1600 Z" fill="url(#suitGrad)" />
 
-  <!-- Back Hair (bun/ponytail) -->
-  <ellipse cx="600" cy="225" rx="75" ry="60" fill="url(#hairGrad)" />
+    <!-- Left Arm -->
+    <path d="M 270 700 C 230 820, 210 1020, 220 1440 C 220 1480, 260 1520, 310 1540 L 360 1550 C 340 1350, 350 1050, 380 840 Z" fill="#15171A" />
+    
+    <!-- Right Arm -->
+    <path d="M 930 700 C 970 820, 990 1020, 980 1420 C 980 1460, 940 1500, 880 1520 L 840 1530 C 860 1330, 850 1050, 820 840 Z" fill="#15171A" />
 
-  <!-- Torso & Shoulders: Black Tailored Suit Jacket -->
-  <!-- Base Torso -->
-  <path d="M 230 1600 L 270 700 C 310 560, 430 520, 600 520 C 770 520, 890 560, 930 700 L 970 1600 Z" fill="url(#suitGrad)" />
+    <!-- White Collared Dress Shirt (Center Chest) -->
+    <polygon points="510,500 690,500 660,1160 540,1160" fill="#FFFFFF" />
+    <!-- Shirt Placket & Buttons -->
+    <line x1="600" y1="520" x2="600" y2="1160" stroke="#E1E5EA" stroke-width="3" />
+    <circle cx="600" cy="670" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
+    <circle cx="600" cy="800" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
+    <circle cx="600" cy="940" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
+    <circle cx="600" cy="1080" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
+    <!-- Shirt Fold Shadows -->
+    <path d="M 540 650 Q 580 720 560 840" stroke="#D1D9E0" stroke-width="2" fill="none" />
+    <path d="M 660 670 Q 620 750 640 860" stroke="#D1D9E0" stroke-width="2" fill="none" />
 
-  <!-- Left Arm -->
-  <path d="M 270 700 C 230 820, 210 1020, 220 1440 C 220 1480, 260 1520, 310 1540 L 360 1550 C 340 1350, 350 1050, 380 840 Z" fill="#15171A" />
-  
-  <!-- Right Arm -->
-  <path d="M 930 700 C 970 820, 990 1020, 980 1420 C 980 1460, 940 1500, 880 1520 L 840 1530 C 860 1330, 850 1050, 820 840 Z" fill="#15171A" />
+    <!-- Shirt Collars (Spread Wings) -->
+    <polygon points="505,480 575,620 600,530 520,470" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+    <polygon points="695,480 625,620 600,530 680,470" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
 
-  <!-- White Collared Dress Shirt (Center Chest) -->
-  <polygon points="510,500 690,500 660,1160 540,1160" fill="#FFFFFF" />
-  <!-- Shirt Placket & Buttons -->
-  <line x1="600" y1="520" x2="600" y2="1160" stroke="#E1E5EA" stroke-width="3" />
-  <circle cx="600" cy="670" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
-  <circle cx="600" cy="800" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
-  <circle cx="600" cy="940" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
-  <circle cx="600" cy="1080" r="6" fill="#F8FAFC" stroke="#C5D0DB" stroke-width="2" />
-  <!-- Shirt Fold Shadows -->
-  <path d="M 540 650 Q 580 720 560 840" stroke="#D1D9E0" stroke-width="2" fill="none" />
-  <path d="M 660 670 Q 620 750 640 860" stroke="#D1D9E0" stroke-width="2" fill="none" />
+    <!-- Black Blazer Front Panels & Lapels -->
+    <!-- Left Lapel -->
+    <polygon points="380,550 515,760 460,860 550,1160 380,1160" fill="url(#lapelGrad)" />
+    <!-- Right Lapel -->
+    <polygon points="820,550 685,760 740,860 650,1160 820,1160" fill="url(#lapelGrad)" />
 
-  <!-- Shirt Collars (Spread Wings) -->
-  <polygon points="505,480 575,620 600,530 520,470" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
-  <polygon points="695,480 625,620 600,530 680,470" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+    <!-- Jacket Lower Overlap & Buttons -->
+    <circle cx="605" cy="880" r="16" fill="#1C1E22" stroke="#2D323A" stroke-width="3" />
+    <circle cx="605" cy="880" r="4" fill="#0A0B0D" />
+    <circle cx="615" cy="1030" r="16" fill="#1C1E22" stroke="#2D323A" stroke-width="3" />
+    <circle cx="615" cy="1030" r="4" fill="#0A0B0D" />
 
-  <!-- Black Blazer Front Panels & Lapels -->
-  <!-- Left Lapel -->
-  <polygon points="380,550 515,760 460,860 550,1160 380,1160" fill="url(#lapelGrad)" />
-  <!-- Right Lapel -->
-  <polygon points="820,550 685,760 740,860 650,1160 820,1160" fill="url(#lapelGrad)" />
+    <!-- Flap Pockets -->
+    <rect x="340" y="1120" width="130" height="18" rx="4" fill="#15171A" stroke="#2A2D33" stroke-width="2" />
+    <rect x="730" y="1120" width="130" height="18" rx="4" fill="#15171A" stroke="#2A2D33" stroke-width="2" />
 
-  <!-- Jacket Lower Overlap & 3 Dark Buttons -->
-  <!-- Button 1 (Mid) -->
-  <circle cx="605" cy="880" r="16" fill="#1C1E22" stroke="#2D323A" stroke-width="3" />
-  <circle cx="605" cy="880" r="4" fill="#0A0B0D" />
-  <!-- Button 2 (Lower) -->
-  <circle cx="615" cy="1030" r="16" fill="#1C1E22" stroke="#2D323A" stroke-width="3" />
-  <circle cx="615" cy="1030" r="4" fill="#0A0B0D" />
+    <!-- Brown Leather Belt -->
+    <rect x="545" y="1140" width="115" height="36" rx="4" fill="url(#beltGrad)" stroke="#2C1607" stroke-width="2" />
+    <!-- Silver Buckle -->
+    <rect x="555" y="1136" width="36" height="44" rx="4" fill="none" stroke="#D1D9E0" stroke-width="5" />
+    <line x1="573" y1="1136" x2="573" y2="1180" stroke="#A1B0C1" stroke-width="4" />
+    <circle cx="625" cy="1158" r="3" fill="#1E0E05" />
+    <circle cx="645" cy="1158" r="3" fill="#1E0E05" />
 
-  <!-- Flap Pockets -->
-  <rect x="340" y="1120" width="130" height="18" rx="4" fill="#15171A" stroke="#2A2D33" stroke-width="2" />
-  <rect x="730" y="1120" width="130" height="18" rx="4" fill="#15171A" stroke="#2A2D33" stroke-width="2" />
+    <!-- Black Trousers -->
+    <path d="M 370 1170 L 590 1170 L 595 1600 L 360 1600 Z" fill="#121418" />
+    <path d="M 610 1170 L 830 1170 L 840 1600 L 605 1600 Z" fill="#121418" />
+    <line x1="600" y1="1170" x2="600" y2="1600" stroke="#08090C" stroke-width="3" />
 
-  <!-- Brown Leather Belt -->
-  <rect x="545" y="1140" width="115" height="36" rx="4" fill="url(#beltGrad)" stroke="#2C1607" stroke-width="2" />
-  <!-- Silver Buckle -->
-  <rect x="555" y="1136" width="36" height="44" rx="4" fill="none" stroke="#D1D9E0" stroke-width="5" />
-  <line x1="573" y1="1136" x2="573" y2="1180" stroke="#A1B0C1" stroke-width="4" />
-  <!-- Belt Holes -->
-  <circle cx="625" cy="1158" r="3" fill="#1E0E05" />
-  <circle cx="645" cy="1158" r="3" fill="#1E0E05" />
+    <!-- Right Wrist: Silver Bangle (Kara) -->
+    <path d="M 250 1530 Q 300 1565 350 1535" fill="none" stroke="#EAF2F8" stroke-width="12" stroke-linecap="round" />
+    <path d="M 252 1530 Q 300 1563 348 1535" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
 
-  <!-- Black Trousers -->
-  <path d="M 370 1170 L 590 1170 L 595 1600 L 360 1600 Z" fill="#101216" />
-  <path d="M 610 1170 L 830 1170 L 840 1600 L 605 1600 Z" fill="#101216" />
-  <line x1="600" y1="1170" x2="600" y2="1600" stroke="#08090C" stroke-width="3" />
+    <!-- Left Wrist: Watch -->
+    <rect x="850" y="1410" width="40" height="60" rx="6" fill="url(#watchStrap)" />
+    <circle cx="915" cy="1440" r="26" fill="#F4ECE2" stroke="#E2B194" stroke-width="6" />
+    <circle cx="915" cy="1440" r="3" fill="#8B5E43" />
+    <line x1="915" y1="1440" x2="915" y2="1424" stroke="#8B5E43" stroke-width="3" stroke-linecap="round" />
+    <line x1="915" y1="1440" x2="927" y2="1446" stroke="#8B5E43" stroke-width="3" stroke-linecap="round" />
 
-  <!-- Right Wrist: Silver Bangle (Kara) -->
-  <path d="M 250 1530 Q 300 1565 350 1535" fill="none" stroke="#D9F6FF" stroke-width="12" stroke-linecap="round" />
-  <path d="M 252 1530 Q 300 1563 348 1535" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+    <!-- Neck -->
+    <path d="M 535 430 L 545 540 C 565 570, 635 570, 655 540 L 665 430 Z" fill="url(#skinShadow)" />
+    <path d="M 545 420 L 555 520 C 570 545, 630 545, 645 520 L 655 420 Z" fill="url(#skinFace)" />
 
-  <!-- Left Wrist: Rose Gold & Tan Leather Watch -->
-  <rect x="850" y="1410" width="40" height="60" rx="6" fill="url(#watchStrap)" />
-  <circle cx="915" cy="1440" r="26" fill="#F4ECE2" stroke="#E2B194" stroke-width="6" />
-  <circle cx="915" cy="1440" r="3" fill="#8B5E43" />
-  <line x1="915" y1="1440" x2="915" y2="1424" stroke="#8B5E43" stroke-width="3" stroke-linecap="round" />
-  <line x1="915" y1="1440" x2="927" y2="1446" stroke="#8B5E43" stroke-width="3" stroke-linecap="round" />
+    <!-- Head & Jaw -->
+    <path d="M 450 320 C 450 490, 500 520, 600 520 C 700 520, 750 490, 750 320 C 750 170, 700 120, 600 120 C 500 120, 450 170, 450 320 Z" fill="url(#skinFace)" />
 
-  <!-- Neck -->
-  <path d="M 535 430 L 545 540 C 565 570, 635 570, 655 540 L 665 430 Z" fill="url(#skinShadow)" />
-  <path d="M 545 420 L 555 520 C 570 545, 630 545, 645 520 L 655 420 Z" fill="url(#skinFace)" />
+    <!-- Hair (Neat, tied back, realistic volume) -->
+    <path d="M 445 290 C 440 180, 500 110, 600 110 C 700 110, 760 180, 755 290 C 750 210, 720 150, 600 150 C 480 150, 450 210, 445 290 Z" fill="url(#hairGrad)" />
+    <path d="M 598 120 Q 600 190 600 230" stroke="#0F0E0D" stroke-width="3" />
+    <!-- Hair side sweeps framing face -->
+    <path d="M 450 260 C 470 200, 540 170, 595 210 C 550 210, 490 230, 465 290 Z" fill="url(#hairGrad)" />
+    <path d="M 750 260 C 730 200, 660 170, 605 210 C 650 210, 710 230, 735 290 Z" fill="url(#hairGrad)" />
 
-  <!-- Head & Jaw -->
-  <path d="M 450 320 C 450 490, 500 520, 600 520 C 700 520, 750 490, 750 320 C 750 170, 700 120, 600 120 C 500 120, 450 170, 450 320 Z" fill="url(#skinFace)" />
+    <!-- Eyebrows (Full, dark, natural arches) -->
+    <path d="M 480 305 Q 530 290 565 308" stroke="#1F1C1A" stroke-width="9" stroke-linecap="round" fill="none" />
+    <path d="M 720 305 Q 670 290 635 308" stroke="#1F1C1A" stroke-width="9" stroke-linecap="round" fill="none" />
 
-  <!-- Hair (Neat, tied back, realistic volume) -->
-  <path d="M 445 290 C 440 180, 500 110, 600 110 C 700 110, 760 180, 755 290 C 750 210, 720 150, 600 150 C 480 150, 450 210, 445 290 Z" fill="url(#hairGrad)" />
-  <!-- Hair parting line and texture -->
-  <path d="M 598 120 Q 600 190 600 230" stroke="#0F0E0D" stroke-width="3" />
-  <!-- Hair side sweeps framing face -->
-  <path d="M 450 260 C 470 200, 540 170, 595 210 C 550 210, 490 230, 465 290 Z" fill="url(#hairGrad)" />
-  <path d="M 750 260 C 730 200, 660 170, 605 210 C 650 210, 710 230, 735 290 Z" fill="url(#hairGrad)" />
+    <!-- Eyes -->
+    <ellipse cx="525" cy="340" rx="24" ry="14" fill="#FFFFFF" />
+    <circle cx="527" cy="340" r="11" fill="#2E211A" />
+    <circle cx="527" cy="340" r="6" fill="#0C0A09" />
+    <circle cx="530" cy="336" r="3" fill="#FFFFFF" />
+    <path d="M 500 338 Q 525 326 552 338" stroke="#221C18" stroke-width="3" fill="none" />
 
-  <!-- Eyebrows (Full, dark, natural arches) -->
-  <path d="M 480 305 Q 530 290 565 308" stroke="#1F1C1A" stroke-width="9" stroke-linecap="round" fill="none" />
-  <path d="M 720 305 Q 670 290 635 308" stroke="#1F1C1A" stroke-width="9" stroke-linecap="round" fill="none" />
+    <ellipse cx="675" cy="340" rx="24" ry="14" fill="#FFFFFF" />
+    <circle cx="673" cy="340" r="11" fill="#2E211A" />
+    <circle cx="673" cy="340" r="6" fill="#0C0A09" />
+    <circle cx="676" cy="336" r="3" fill="#FFFFFF" />
+    <path d="M 648 338 Q 675 326 700 338" stroke="#221C18" stroke-width="3" fill="none" />
 
-  <!-- Eyes -->
-  <!-- Left Eye -->
-  <ellipse cx="525" cy="340" rx="24" ry="14" fill="#FFFFFF" />
-  <circle cx="527" cy="340" r="11" fill="#2E211A" />
-  <circle cx="527" cy="340" r="6" fill="#0C0A09" />
-  <circle cx="530" cy="336" r="3" fill="#FFFFFF" />
-  <path d="M 500 338 Q 525 326 552 338" stroke="#221C18" stroke-width="3" fill="none" />
-  <!-- Right Eye -->
-  <ellipse cx="675" cy="340" rx="24" ry="14" fill="#FFFFFF" />
-  <circle cx="673" cy="340" r="11" fill="#2E211A" />
-  <circle cx="673" cy="340" r="6" fill="#0C0A09" />
-  <circle cx="676" cy="336" r="3" fill="#FFFFFF" />
-  <path d="M 648 338 Q 675 326 700 338" stroke="#221C18" stroke-width="3" fill="none" />
+    <!-- Blue Glasses Frame (Signature characteristic) -->
+    <rect x="475" y="295" width="105" height="85" rx="18" fill="none" stroke="url(#blueGlasses)" stroke-width="11" />
+    <rect x="478" y="298" width="99" height="79" rx="14" fill="#62E6FF" fill-opacity="0.04" stroke="#70D3FC" stroke-opacity="0.25" stroke-width="2" />
+    <rect x="620" y="295" width="105" height="85" rx="18" fill="none" stroke="url(#blueGlasses)" stroke-width="11" />
+    <rect x="623" y="298" width="99" height="79" rx="14" fill="#62E6FF" fill-opacity="0.04" stroke="#70D3FC" stroke-opacity="0.25" stroke-width="2" />
+    <path d="M 580 325 Q 600 315 620 325" fill="none" stroke="url(#blueGlasses)" stroke-width="11" stroke-linecap="round" />
+    <line x1="475" y1="320" x2="445" y2="310" stroke="url(#blueGlasses)" stroke-width="9" stroke-linecap="round" />
+    <line x1="725" y1="320" x2="755" y2="310" stroke="url(#blueGlasses)" stroke-width="9" stroke-linecap="round" />
+    <line x1="490" y1="365" x2="525" y2="310" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.35" stroke-linecap="round" />
+    <line x1="635" y1="365" x2="670" y2="310" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.35" stroke-linecap="round" />
 
-  <!-- Blue Glasses Frame (Signature characteristic from uploaded photo) -->
-  <!-- Left Rim -->
-  <rect x="475" y="295" width="105" height="85" rx="18" fill="none" stroke="url(#blueGlasses)" stroke-width="11" />
-  <rect x="478" y="298" width="99" height="79" rx="14" fill="#62E6FF" fill-opacity="0.04" stroke="#70D3FC" stroke-opacity="0.25" stroke-width="2" />
-  <!-- Right Rim -->
-  <rect x="620" y="295" width="105" height="85" rx="18" fill="none" stroke="url(#blueGlasses)" stroke-width="11" />
-  <rect x="623" y="298" width="99" height="79" rx="14" fill="#62E6FF" fill-opacity="0.04" stroke="#70D3FC" stroke-opacity="0.25" stroke-width="2" />
-  <!-- Bridge -->
-  <path d="M 580 325 Q 600 315 620 325" fill="none" stroke="url(#blueGlasses)" stroke-width="11" stroke-linecap="round" />
-  <!-- Temples (Arms going back) -->
-  <line x1="475" y1="320" x2="445" y2="310" stroke="url(#blueGlasses)" stroke-width="9" stroke-linecap="round" />
-  <line x1="725" y1="320" x2="755" y2="310" stroke="url(#blueGlasses)" stroke-width="9" stroke-linecap="round" />
-  <!-- Subtle Glass Glare Diagonal -->
-  <line x1="490" y1="365" x2="525" y2="310" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round" />
-  <line x1="635" y1="365" x2="670" y2="310" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round" />
+    <!-- Nose -->
+    <path d="M 598 335 L 594 410 Q 600 422 612 414" stroke="#C59B7D" stroke-width="3.5" fill="none" stroke-linecap="round" />
+    <circle cx="584" cy="414" r="3" fill="#B88A6E" opacity="0.6" />
+    <circle cx="616" cy="414" r="3" fill="#B88A6E" opacity="0.6" />
 
-  <!-- Nose -->
-  <path d="M 598 335 L 594 410 Q 600 422 612 414" stroke="#C59B7D" stroke-width="3.5" fill="none" stroke-linecap="round" />
-  <circle cx="584" cy="414" r="3" fill="#B88A6E" opacity="0.6" />
-  <circle cx="616" cy="414" r="3" fill="#B88A6E" opacity="0.6" />
-
-  <!-- Gentle Smile -->
-  <path d="M 552 460 Q 600 490 648 460" stroke="#A3545A" stroke-width="6" fill="none" stroke-linecap="round" />
-  <path d="M 565 462 Q 600 480 635 462" fill="#8C3E44" opacity="0.35" />
-
-  <!-- Restrained Holographic Framing Details -->
-  <rect x="25" y="25" width="1150" height="1550" rx="20" fill="none" stroke="#62E6FF" stroke-width="2" opacity="0.3" />
-  <circle cx="35" cy="35" r="4" fill="#62E6FF" opacity="0.8" />
-  <circle cx="1165" cy="35" r="4" fill="#62E6FF" opacity="0.8" />
-  <circle cx="35" cy="1565" r="4" fill="#62E6FF" opacity="0.8" />
-  <circle cx="1165" cy="1565" r="4" fill="#62E6FF" opacity="0.8" />
-
-  <!-- Lower Subtle Holographic Identity Banner -->
-  <rect x="350" y="1500" width="500" height="60" rx="8" fill="#080D14" fill-opacity="0.85" stroke="#2A3B4D" stroke-width="1.5" />
-  <text x="600" y="1532" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="#F4F7FB" text-anchor="middle" letter-spacing="1.5">GURLEEN KAUR BHATIA</text>
-  <text x="600" y="1550" font-family="'JetBrains Mono', monospace" font-size="12" fill="#62E6FF" text-anchor="middle" letter-spacing="1">NIT AGARTALA · B.TECH CSE</text>
+    <!-- Gentle Smile -->
+    <path d="M 552 460 Q 600 490 648 460" stroke="#A3545A" stroke-width="6" fill="none" stroke-linecap="round" />
+    <path d="M 565 462 Q 600 480 635 462" fill="#8C3E44" opacity="0.35" />
+  </g>
 </svg>
