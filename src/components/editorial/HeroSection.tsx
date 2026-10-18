@@ -34,7 +34,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const heroSkillTags = [
     'LLMs & RAG',
     'Knowledge Graphs',
-    'Distributed Systems',
     'Metaheuristic Optimization',
     'Python & TypeScript',
     'Full-Stack Architecture'
@@ -180,14 +179,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </h1>
               </div>
 
-              {/* “Building intelligent solutions” Headline */}
+              {/* Tagline Headline */}
               <div 
                 className={`pt-1 transition-all duration-700 delay-200 ${
                   animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                 }`}
               >
                 <p className="text-xl sm:text-2xl font-serif italic text-[#783D4C] font-semibold">
-                  Building intelligent solutions.
+                  I build LLM and RAG systems that I can evaluate honestly.
                 </p>
               </div>
             </div>
@@ -198,9 +197,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
               }`}
             >
-              Computer Science & Engineering undergraduate at the National Institute of Technology Agartala. 
-              Engineering scalable AI architectures, graph-grounded LLM systems, and high-performance software 
-              with verifiable evaluation benchmarks.
+              Computer Science & Engineering undergraduate at NIT Agartala, building LLM/RAG systems, knowledge-graph reasoning and optimization algorithms.
             </p>
 
             {/* Staggered Skill Tags Sequence */}
@@ -218,6 +215,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   {tag}
                 </span>
               ))}
+            </div>
+
+            {/* Open to 2027 Internships Badge */}
+            <div
+              className={`pt-1 transition-all duration-700 delay-380 ${
+                animStep >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+              }`}
+            >
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-medium text-[#783D4C] bg-[#EEF4FA] border border-[#D5E2F0]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#783D4C]" />
+                Open to 2027 AI/ML internships
+              </span>
             </div>
 
             {/* Call to Action Buttons + Working Social Links */}

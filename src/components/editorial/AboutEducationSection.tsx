@@ -68,11 +68,11 @@ export const AboutEducationSection: React.FC = () => {
               <ul className="space-y-2 text-xs text-[#5C6B7D]">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#783D4C] shrink-0 mt-0.5" />
-                  <span>Deterministic evaluation pipelines before model deployment</span>
+                  <span>Documenting projects with clear limitations and next steps</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#783D4C] shrink-0 mt-0.5" />
-                  <span>High code testability, comprehensive documentation, and clean Git hygiene</span>
+                  <span>Reporting metrics with the data they were measured on</span>
                 </li>
               </ul>
             </div>

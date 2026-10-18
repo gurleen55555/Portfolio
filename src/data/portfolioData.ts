@@ -38,8 +38,8 @@ export const PORTFOLIO_DATA = {
     name: "Gurleen Kaur Bhatia",
     monogram: "GKB",
     eyebrow: "COMPUTER SCIENCE · AI ENGINEERING",
-    tagline: "Building intelligent solutions.",
-    heroSummary: "I build AI systems and software that turn complex problems into practical solutions.",
+    tagline: "I build LLM and RAG systems that I can evaluate honestly.",
+    heroSummary: "Computer Science & Engineering undergraduate at NIT Agartala, building LLM/RAG systems, knowledge-graph reasoning and optimization algorithms.",
     institutionLine: "NIT Agartala · Computer Science & Engineering",
     aboutIntro: "I’m Gurleen Kaur Bhatia, a Computer Science undergraduate at NIT Agartala. I’m interested in AI engineering, software development, algorithms, and building systems that make complex information more useful. I enjoy exploring ideas from implementation through evaluation, with a focus on understanding how things work beneath the interface.",
     email: "khushibhatia5555@gmail.com",
@@ -110,9 +110,9 @@ export const PORTFOLIO_DATA = {
       role: "AI Engineer — LLM and RAG",
       date: "July 2026",
       description: "An offline predictive copilot designed for secure, air-gapped environments, combining local language-model assistance with telemetry-based anomaly and failure prediction.",
-      problem: "Mission-critical aerospace installations operate under strict zero-exfiltration air-gap protocols that prohibit connections to external cloud AI APIs, demanding completely offline assistance.",
+      problem: "Secure, air-gapped operations operate under strict zero-exfiltration air-gap protocols that prohibit connections to external cloud AI APIs, demanding completely offline assistance.",
       approach: "Engineered a dual-stage architecture combining local quantized language model inference (Phi-3 Mini via Ollama) with an LSTM anomaly detection network trained on synthetic telemetry data.",
-      architecture: "3-tier pipeline: Telemetry Stream Analysis → Dual-Layer LSTM Anomaly Scorer → Local Copilot RAG Runbook Engine. Anomaly flags automatically trigger vector retrieval over offline technical recovery runbooks.",
+      architecture: "3-tier pipeline: Telemetry Stream Analysis → LSTM Anomaly Scorer → Local Copilot RAG Runbook Engine. Anomaly flags automatically trigger vector retrieval over offline technical recovery runbooks.",
       technologies: ["Python", "Streamlit", "TensorFlow/Keras", "LSTM", "scikit-learn", "Ollama", "Phi-3 Mini", "RAG"],
       keyFeatures: [
         "Local Phi-3 Mini inference requiring zero external internet access.",
@@ -138,7 +138,7 @@ export const PORTFOLIO_DATA = {
       date: "September 2026 – Present",
       status: "In Progress",
       description: "A routing optimization project exploring quantum-behaved particle swarm optimization for road networks under changing traffic conditions.",
-      problem: "Dynamic urban route scheduling under sudden disruptions (lane blocks, peak congestion, traffic accidents) causes traditional deterministic search algorithms to suffer combinatorial slowdowns.",
+      problem: "Dynamic urban route scheduling under sudden disruptions (lane blocks, peak congestion, traffic accidents) where static baselines struggle to adapt when road conditions change mid-route.",
       approach: "Developing a Quantum-Behaved Particle Swarm Optimization (QPSO) framework modeled on urban road networks using OSMnx and NetworkX, testing swarm convergence under dynamic cost surfaces.",
       architecture: "Graph topology representation (600+ nodes) with dynamic edge weights. Swarm particles update positions using quantum state wave equations rather than classical velocity vectors to prevent premature local minima trapping.",
       technologies: ["Python", "NumPy", "QPSO", "NetworkX", "OSMnx", "Metaheuristic Optimization"],
@@ -239,8 +239,7 @@ export const PORTFOLIO_DATA = {
       description: "Technical operations, CRM workflow automation, and backend systems maintenance.",
       highlights: [
         "Assisting in technical operations, system automation, and cross-team workflows involving databases and APIs.",
-        "Contributed to internal CRM optimizations with a reported estimate of 40% improvement in sales workflow efficiency.",
-        "Supported CRM, automation, database, API and backend workflows."
+        "Contributed to internal CRM optimizations with a reported estimate of 40% improvement in sales workflow efficiency."
       ]
     },
     {

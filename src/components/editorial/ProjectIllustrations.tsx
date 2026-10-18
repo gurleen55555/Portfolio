@@ -343,7 +343,7 @@ export const AstraGridPipelineDiagram: React.FC = () => {
       metric: '2,000 Synthetic Records',
       subtitle: 'Multivariate sensor stream preprocessed in real-time',
       badge: 'Edge Sensor Stream',
-      telemetryFields: ['telemetry features'],
+      telemetryFields: ['Synthetic telemetry', 'Local rolling buffer'],
       explanation:
         'Raw sensor arrays feed high-frequency telemetry features into a local rolling buffer, performing anomaly scoring before neural inference.',
     },
@@ -359,7 +359,7 @@ export const AstraGridPipelineDiagram: React.FC = () => {
     },
     {
       step: '03',
-      title: 'Deterministic Diagnostic Agent',
+      title: 'Offline Diagnostic Agent',
       metric: 'Ollama Phi-3 Mini',
       subtitle: 'Zero cloud latency offline diagnosis & checklists',
       badge: 'Zero-Telemetry LLM',
@@ -473,7 +473,7 @@ export const AstraGridPipelineDiagram: React.FC = () => {
           </div>
         ) : (
           <div className="flex items-center justify-between text-[#5C6B7D] py-1 text-[10px]">
-            <span>Click any stage in the aerospace pipeline to view execution architecture</span>
+            <span>Click any stage in the offline pipeline to view execution architecture</span>
             <span className="text-[#783D4C] font-medium">Stage Inspector</span>
           </div>
         )}
@@ -486,7 +486,7 @@ export const AstraGridPipelineDiagram: React.FC = () => {
 
       {/* Footer Meta */}
       <div className="flex items-center justify-between text-[10px] text-[#5C6B7D] pt-2 mt-1 border-t border-[#D5E2F0]">
-        <span>Air-Gapped Aerospace Telemetry Architecture</span>
+        <span>Air-Gapped Offline Copilot Architecture</span>
         <span className="text-[#783D4C] font-medium">LSTM · Phi-3 Mini · Ollama</span>
       </div>
     </div>
@@ -592,7 +592,7 @@ export const TrafficQPSONetworkDiagram: React.FC = () => {
               : 'bg-white text-[#5C6B7D] border-[#D5E2F0]'
           }`}
         >
-          QPSO Swarm Optimal
+          QPSO Candidate Path
         </button>
         <button
           onClick={(e) => {
