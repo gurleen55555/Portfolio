@@ -225,9 +225,8 @@ export const PORTFOLIO_DATA = {
       type: "leadership",
       description: "Serving as campus liaison supporting student technology initiatives and peer learning.",
       highlights: [
-        "Engaging with the campus student developer community around modern software engineering and responsible AI practices.",
-        "Organizing technical awareness sessions and facilitating collaborative peer learning for undergraduate students.",
-        "Representing student engineering interests and sharing developer resources from Google developer programs."
+        "Reached 200+ participants through ~5 campaigns and sessions on AI, technical skills and Gemini.",
+        "Supported 50-60 girls with technical guidance and AI awareness."
       ]
     },
     {
@@ -241,7 +240,7 @@ export const PORTFOLIO_DATA = {
       highlights: [
         "Assisting in technical operations, system automation, and cross-team workflows involving databases and APIs.",
         "Contributed to internal CRM optimizations with a reported estimate of 40% improvement in sales workflow efficiency.",
-        "Documenting standard operating procedures and verifying data hygiene routines across distributed technical teams."
+        "Supported CRM, automation, database, API and backend workflows."
       ]
     },
     {
@@ -253,8 +252,8 @@ export const PORTFOLIO_DATA = {
       type: "community",
       description: "Active member contributing to campus AI/ML and data science study groups.",
       highlights: [
-        "Participating in peer-to-peer technical learning sessions focused on algorithmic problem solving and ML foundations.",
-        "Collaborating with club members on introductory data science workshops and hackathon preparations."
+        "Core member of the institute's largest technical club.",
+        "Hosted DSAI Orientation 2026."
       ]
     },
     {

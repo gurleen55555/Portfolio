@@ -25,7 +25,7 @@ export const AboutEducationSection: React.FC = () => {
             Curious about how intelligent systems work<span className="text-[#783D4C]">.</span>
           </h2>
           <p className="text-sm sm:text-base text-[#5C6B7D] max-w-2xl leading-relaxed">
-            Bridging foundational computer science rigor with hands-on AI research, distributed system architectures, and production-ready software development.
+            Bridging foundational computer science rigor with hands-on AI research and production-ready software development.
           </p>
         </div>
 
@@ -44,10 +44,7 @@ export const AboutEducationSection: React.FC = () => {
               </p>
 
               <p className="text-xs sm:text-sm text-[#5C6B7D] leading-relaxed">
-                I am particularly drawn to problems at the intersection of machine learning systems, 
-                graph reasoning, and resilient distributed execution. Rather than treating AI models as black boxes, 
-                I focus on grounding outputs with structured knowledge graphs, maintaining strict auditability, 
-                and optimizing inference latency under resource constraints.
+                I'm drawn to problems where machine learning meets structured reasoning: grounding LLM outputs in knowledge graphs and retrieval, and evaluating them honestly.
               </p>
 
               <div className="pt-2 border-t border-[#D5E2F0] grid grid-cols-2 gap-3 text-xs font-mono">
@@ -57,7 +54,7 @@ export const AboutEducationSection: React.FC = () => {
                 </div>
                 <div className="p-2.5 rounded-lg bg-[#EEF4FA] border border-[#D5E2F0]">
                   <span className="text-[10px] text-[#5C6B7D] block">OBJECTIVE</span>
-                  <span className="text-[#354354] font-bold">2026 SWE / AI Role</span>
+                  <span className="text-[#354354] font-bold">2027 AI/ML Internships</span>
                 </div>
               </div>
             </div>
@@ -72,10 +69,6 @@ export const AboutEducationSection: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#783D4C] shrink-0 mt-0.5" />
                   <span>Deterministic evaluation pipelines before model deployment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#783D4C] shrink-0 mt-0.5" />
-                  <span>Strict air-gapped data hygiene for enterprise & proprietary workloads</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#783D4C] shrink-0 mt-0.5" />
@@ -133,7 +126,7 @@ export const AboutEducationSection: React.FC = () => {
             <div className="space-y-4">
               <div className="text-xs font-mono text-[#354354] uppercase tracking-wider flex items-center gap-2 font-bold">
                 <Award className="w-4 h-4 text-[#783D4C]" />
-                <span>Verified Certifications</span>
+                <span>Certifications</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

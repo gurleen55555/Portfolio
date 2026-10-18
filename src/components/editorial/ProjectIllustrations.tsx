@@ -323,8 +323,8 @@ export const ZentroKnowledgeGraphDiagram: React.FC = () => {
 
       {/* Footer Meta */}
       <div className="flex items-center justify-between text-[10px] text-[#5C6B7D] pt-2 mt-1 border-t border-[#D5E2F0]">
-        <span>Graph Ontology Layer · Dual LLM Pipeline</span>
-        <span className="text-[#783D4C] font-medium">TypeScript · Next.js · Neo4j</span>
+        <span>Graph Ontology Layer · Multi-Agent Reasoning</span>
+        <span className="text-[#783D4C] font-medium">TypeScript · Next.js · Supabase</span>
       </div>
     </div>
   );
@@ -340,22 +340,22 @@ export const AstraGridPipelineDiagram: React.FC = () => {
     {
       step: '01',
       title: 'Telemetry Ingestion',
-      metric: '30,000+ Records',
+      metric: '2,000 Synthetic Records',
       subtitle: 'Multivariate sensor stream preprocessed in real-time',
       badge: 'Edge Sensor Stream',
-      telemetryFields: ['Velocity (Mach)', 'Core Temp (°C)', 'Pressure Differential (kPa)'],
+      telemetryFields: ['telemetry features'],
       explanation:
-        'Raw sensor arrays feed high-frequency metrics into a local rolling buffer, performing z-score anomaly scoring on CPU before neural inference.',
+        'Raw sensor arrays feed high-frequency telemetry features into a local rolling buffer, performing anomaly scoring before neural inference.',
     },
     {
       step: '02',
       title: 'LSTM Predictive Forecaster',
-      metric: '0.94 F1-Score',
+      metric: '85.93% Accuracy',
       subtitle: 'Air-gapped temporal anomaly sequence detection',
       badge: 'Offline Model Core',
-      telemetryFields: ['Sliding Window: 60s', 'Prediction Horizon: 120s', 'Loss: 0.018 MSE'],
+      telemetryFields: ['0.85 Macro F1', '0.97 Failure Recall'],
       explanation:
-        'A lightweight bidirectional LSTM model processes 60-second sliding temporal windows to detect impending component failure signals before threshold breach.',
+        'A lightweight LSTM model processes temporal sequences to detect impending component failure signals before threshold breach.',
     },
     {
       step: '03',
@@ -363,9 +363,9 @@ export const AstraGridPipelineDiagram: React.FC = () => {
       metric: 'Ollama Phi-3 Mini',
       subtitle: 'Zero cloud latency offline diagnosis & checklists',
       badge: 'Zero-Telemetry LLM',
-      telemetryFields: ['Prompt Tokens: 412', 'Latency: 180ms', 'Validation: Pydantic Rules'],
+      telemetryFields: ['Fully offline', 'RAG over local runbooks'],
       explanation:
-        'A quantized SLM (Phi-3 Mini) evaluates flagged anomalies against aircraft operator manuals, generating structured diagnostic guidance strictly offline.',
+        'A quantized SLM (Phi-3 Mini) evaluates flagged anomalies against operational runbooks, generating structured diagnostic guidance strictly offline.',
     },
   ];
 
@@ -479,6 +479,11 @@ export const AstraGridPipelineDiagram: React.FC = () => {
         )}
       </div>
 
+      {/* Note under diagram */}
+      <div className="pt-2 text-[10px] text-[#5C6B7D] italic">
+        Results on synthetic telemetry; not validated on real hardware.
+      </div>
+
       {/* Footer Meta */}
       <div className="flex items-center justify-between text-[10px] text-[#5C6B7D] pt-2 mt-1 border-t border-[#D5E2F0]">
         <span>Air-Gapped Aerospace Telemetry Architecture</span>
@@ -502,25 +507,25 @@ export const TrafficQPSONetworkDiagram: React.FC = () => {
     normal: {
       label: 'Nominal Traffic Flow',
       description: 'Standard load across urban arterials with uniform link weights.',
-      congestionLevel: 'Low (0.24 Mean Delay Factor)',
-      qpsoCost: 'Travel Time: 14.2 min (Optimal)',
-      baselineCost: 'Dijkstra: 14.5 min (Near-equivalent)',
+      congestionLevel: 'Low Delay Factor',
+      qpsoCost: 'Result: pending benchmark',
+      baselineCost: 'Baseline: pending benchmark',
       incidentNode: null,
     },
     rush: {
       label: 'Peak Hour Congestion',
       description: 'Heavy saturation along central arterial causing non-linear queue delays.',
-      congestionLevel: 'High (0.81 Saturation Index)',
-      qpsoCost: 'QPSO Swarm: 18.6 min (-21% vs Baseline)',
-      baselineCost: 'Dijkstra: 23.4 min (Trapped in bottleneck)',
+      congestionLevel: 'High Saturation Index',
+      qpsoCost: 'Result: pending benchmark',
+      baselineCost: 'Baseline: pending benchmark',
       incidentNode: { cx: 280, cy: 110, label: 'Bottleneck A-1' },
     },
     accident: {
       label: 'Primary Arterial Collision Blockage',
       description: 'Severe lane closure on central transit route forcing stochastic redistribution.',
-      congestionLevel: 'Critical (Link 280-110 Blocked)',
-      qpsoCost: 'QPSO Dynamic Reroute: 19.8 min (Discovered Bypass)',
-      baselineCost: 'Dijkstra: 28.1 min (Static Penalty Overflow)',
+      congestionLevel: 'Primary Link Blocked',
+      qpsoCost: 'Result: pending benchmark',
+      baselineCost: 'Baseline: pending benchmark',
       incidentNode: { cx: 280, cy: 110, label: 'INCIDENT: LINK BLOCKED' },
     },
   };
@@ -529,6 +534,13 @@ export const TrafficQPSONetworkDiagram: React.FC = () => {
 
   return (
     <div className="w-full bg-[#EEF4FA] border border-[#D5E2F0] hover:border-[#783D4C]/40 transition-colors rounded-xl p-4 sm:p-5 flex flex-col justify-between font-mono select-none relative overflow-hidden group/diagram shadow-xs">
+      {/* Visible Notice Banner */}
+      <div className="mb-3 px-3 py-2 rounded-lg bg-white border border-[#D5E2F0] text-[10px] text-[#354354] font-sans flex items-center gap-2 shadow-2xs">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#783D4C] shrink-0" />
+        <span className="font-semibold text-[#783D4C]">Notice:</span>
+        <span className="text-[#5C6B7D]">Conceptual illustration. Real benchmark results (30 runs per algorithm) will replace this view.</span>
+      </div>
+
       {/* Top Header Label */}
       <div className="flex items-center justify-between text-xs pb-3 border-b border-[#D5E2F0]">
         <div className="flex items-center gap-2">
@@ -593,7 +605,7 @@ export const TrafficQPSONetworkDiagram: React.FC = () => {
               : 'bg-white text-[#5C6B7D] border-[#D5E2F0]'
           }`}
         >
-          Dijkstra Baseline
+          Static Baseline Path
         </button>
         <button
           onClick={(e) => {
@@ -674,10 +686,14 @@ export const TrafficQPSONetworkDiagram: React.FC = () => {
             </g>
           )}
 
-          {/* Route 2: Dijkstra Baseline Path */}
+          {/* Route 2: Static Baseline Path (not drawn through blocked link) */}
           {selectedRoute === 'dijkstra' && (
             <polyline
-              points="50,110 160,110 280,110 390,110 460,110"
+              points={
+                scenario === 'accident'
+                  ? '50,110 160,170 290,170 400,170 460,110'
+                  : '50,110 160,110 280,110 390,110 460,110'
+              }
               stroke="#354354"
               strokeWidth="2.2"
               strokeDasharray="4 2"
